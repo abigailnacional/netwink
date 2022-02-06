@@ -17,7 +17,11 @@
     <string name="re_enter_password">Re-enter password</string>
     <string name="create_account">Create Account</string>
     <string name="welcome_msg">Welcome\nto the\nFamily!</string>
+
+    <string name="title_activity_home_page">Netwink</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_communities">Communities</string>
+    <string name="title_post">Post</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_jobs">Jobs</string>
 </resources>

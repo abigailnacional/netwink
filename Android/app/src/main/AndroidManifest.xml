@@ -12,13 +12,16 @@
         <activity
             android:name=".HomePage"
             android:exported="false"
+            android:theme="@style/Theme.Netwink.NoActionBar"
             android:label="@string/title_activity_home_page" />
         <activity
             android:name=".Welcome"
+            android:theme="@style/Theme.Netwink.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".CreateAccount"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/create_account" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"

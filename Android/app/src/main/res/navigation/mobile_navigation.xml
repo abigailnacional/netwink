@@ -7,19 +7,31 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.hack.netwink.ui.home.HomeFragment"
+        android:name="com.hack.netwink.Fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.hack.netwink.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_communities"
+        android:name="com.hack.netwink.Fragments.CommunitiesFragment"
+        android:label="@string/title_communities"
+        tools:layout="@layout/fragment_communities" />
+
+    <fragment
+        android:id="@+id/navigation_add_post"
+        android:name="com.hack.netwink.Fragments.PostFragment"
+        android:label="@string/title_post"
+        tools:layout="@layout/fragment_post" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.hack.netwink.ui.notifications.NotificationsFragment"
+        android:name="com.hack.netwink.Fragments.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_jobs"
+        android:name="com.hack.netwink.Fragments.JobsFragment"
+        android:label="@string/title_jobs"
+        tools:layout="@layout/fragment_jobs" />
 </navigation>

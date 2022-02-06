@@ -19,6 +19,6 @@ public class Welcome extends AppCompatActivity {
                 //start
                 startActivity(new Intent(Welcome.this, HomePage.class));
             }
-        }, 5000);
+        }, 3000);
     }
 }
