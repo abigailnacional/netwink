@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <title>{% block title %}Netwink{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <head>
+    <style>
+      .navbar a {
+        float: right;
+        text-align: center;
+        color: rgb(138, 45, 153);
+        padding: 12px;
+        background-color: white;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 25px;
+        border: 2px solid rgb(138, 45, 153);
+        padding: 10px; 
+      }
+      body {
+        background-color: rgb(235, 177, 255);
+      }
+      .siteLogo {
+        position: absolute;
+        max-width: 300px;
+        max-height: 200px;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href = "{{ url_for('index.index') }}"><img src="../static/logo (2) 2.jpeg" alt="Netwink Logo" class = "siteLogo"></a>
+    <div class="navbar">
+      <a class="active" href="#">Messages</a> 
+      <a href="{{url_for('index.jobs')}}">Jobs</a> 
+      <a href="#">Community</a> 
+      <a href="#">Profile</a>
+    </div>
+    <br><br>
+    <div style = "padding-top: 100px;">
+    {% block content %}
+    {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <style>
+        .indexLinks{
+            color: rgb(138, 45, 153);
+        }
+        p{
+            font-size: 30px;
+            text-align: center;
+        }
+        ul {
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+        li {
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<div class = "indexLinks">
+<p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    </p>
+    <p>Sign In</p>
+<p>Or <a href="{{ url_for('users.register') }}">Create an Account</a></p>
+</div>
+<div style = "position: relative; top: 10px; left: 510px">
+    <img src="../static/frontpage 1.png" alt="Netwink Logo" class = "siteLogo">
+</div>
+{% endblock %}
