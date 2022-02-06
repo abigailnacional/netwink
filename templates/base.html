@@ -1,24 +1,42 @@
-<!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Netwink</h1>
-  <ul>
-    {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li>Log Out</a>
-    {% else %}
-      <li><a href="{{ url_for('users.register') }}">Register</a>
-      <li>Log In</a>
-    {% endif %}
-  </ul>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+<!DOCTYPE html>
+  <html lang="en">
+  <title>{% block title %}Netwink{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <head>
+    <style>
+      .navbar a {
+        float: right;
+        text-align: center;
+        color: rgb(138, 45, 153);
+        padding: 12px;
+        background-color: white;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 25px;
+        border: 2px solid rgb(138, 45, 153);
+        padding: 10px; 
+      }
+      body {
+        background-color: rgb(235, 177, 255);
+      }
+      .siteLogo {
+        position: absolute;
+        max-width: 300px;
+        max-height: 200px;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href = "{{ url_for('index.index') }}"><img src="../static/logo (2) 2.jpeg" alt="Netwink Logo" class = "siteLogo"></a>
+    <div class="navbar">
+      <a class="active" href="#">Messages</a> 
+      <a href="#">Job</a> 
+      <a href="#">Community</a> 
+      <a href="#">Profile</a>
+    </div>
+    <br><br>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

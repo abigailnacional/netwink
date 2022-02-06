@@ -14,8 +14,7 @@ bp = Blueprint('users', __name__)
 
 """
 This form takes input from the user that is needed for registration, namely
-a first name, last name, email, password, and address.
-All fields except for the address field are required for submission.
+a first name, last name, email, and password.
 All fields have a length requirement of 0 and a length limit.
 The password must be repeated in a second field.
 All data from this form is saved, unchanged, to our database, EXCEPT for the
@@ -23,17 +22,27 @@ password, which is saved as its hashed version.
 """
 #for email, check email
 class RegistrationForm(FlaskForm):
-    first_name = StringField(_l('First Name'), validators=[DataRequired(),
+    first_name = StringField(_l('First Name*'), validators=[DataRequired(),
         Length(min=0, max=32, message='First name must be between 0 and 32 characters in length.')])
-    last_name = StringField(_l('Last Name'), validators=[DataRequired(),
+    last_name = StringField(_l('Last Name*'), validators=[DataRequired(),
         Length(min=0, max=32, message='Last name must be between 0 and 32 characters in length.')])
-    email = StringField(_l('Email'), validators=[DataRequired(),
+    email = StringField(_l('Email*'), validators=[DataRequired(),
         Length(min=0, max=64, message='Email must be between 0 and 64 characters in length.')])
-    password = PasswordField(_l('Password'), validators=[DataRequired(),
+    password = PasswordField(_l('Password*'), validators=[DataRequired(),
         Length(min=0, max=32, message='Password must be between 0 and 32 characters in length.')])
     password2 = PasswordField(
-        _l('Repeat Password'), validators=[DataRequired(),
+        _l('Repeat Password*'), validators=[DataRequired(),
                                            EqualTo('password')])
+    country = StringField(_l('Country'), validators=[Length(min=0, max=32, 
+        message='Country name must be between 0 and 32 characters in length.')])
+    institution = StringField(_l('Most Recent Institution'), validators=[Length(min=0, max=64, 
+        message='Institution name must be between 0 and 64 characters in length.')])
+    aos = StringField(_l('Area of Study or Intended'), validators=[Length(min=0, max=32, 
+        message='Area of Study must be between 0 and 32 characters in length.')])
+    exp = StringField(_l('Experiences'), validators=[Length(min=0, max=64, 
+        message='Experiences must be between 0 and 64 characters in length.')])
+    gender = StringField(_l('Gender'), validators=[Length(min=0, max=32, 
+        message='Gender must be between 0 and 32 characters in length.')])
     submit = SubmitField(_l('Register'))
 
     """
@@ -57,8 +66,12 @@ def register():
         if User.register(form.first_name.data,
                          form.last_name.data,
                          form.email.data,
-                         form.password.data):
-            flash('Congratulations, you are now a registered user!')
-            return redirect(url_for('index.index')) #change
+                         form.password.data,
+                         form.country.data,
+                         form.institution.data,
+                         form.aos.data,
+                         form.exp.data,
+                         form.gender.data):
+            flash('Congratulations, you have successfully registered!')
+            return redirect(url_for('index.index'))
     return render_template('register.html', title='Register', form=form)
-
