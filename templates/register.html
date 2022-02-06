@@ -15,16 +15,16 @@
   <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
-      {{ form.first_name.label }}<br/>
-      {{ form.first_name(size=32) }}<br/>
-      {% for error in form.first_name.errors %}
+      {{ form.fName.label }}<br/>
+      {{ form.fName(size=32) }}<br/>
+      {% for error in form.fName.errors %}
       <span style="color: red;">[{{ error }}]</span>
       {% endfor %}
     </p>
     <p>
-      {{ form.last_name.label }}<br/>
-      {{ form.last_name(size=32) }}<br/>
-      {% for error in form.last_name.errors %}
+      {{ form.lName.label }}<br/>
+      {{ form.lName(size=32) }}<br/>
+      {% for error in form.lName.errors %}
       <span style="color: red;">[{{ error }}]</span>
       {% endfor %}
     </p>

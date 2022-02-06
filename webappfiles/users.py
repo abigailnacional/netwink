@@ -22,9 +22,9 @@ password, which is saved as its hashed version.
 """
 #for email, check email
 class RegistrationForm(FlaskForm):
-    first_name = StringField(_l('First Name*'), validators=[DataRequired(),
+    fName = StringField(_l('First Name*'), validators=[DataRequired(),
         Length(min=0, max=32, message='First name must be between 0 and 32 characters in length.')])
-    last_name = StringField(_l('Last Name*'), validators=[DataRequired(),
+    lName = StringField(_l('Last Name*'), validators=[DataRequired(),
         Length(min=0, max=32, message='Last name must be between 0 and 32 characters in length.')])
     email = StringField(_l('Email*'), validators=[DataRequired(),
         Length(min=0, max=64, message='Email must be between 0 and 64 characters in length.')])
@@ -63,8 +63,8 @@ def register():
     #    return redirect(url_for('index.index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        if User.register(form.first_name.data,
-                         form.last_name.data,
+        if User.register(form.fName.data,
+                         form.lName.data,
                          form.email.data,
                          form.password.data,
                          form.country.data,

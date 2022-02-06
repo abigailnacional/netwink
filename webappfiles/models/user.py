@@ -11,20 +11,20 @@ from create import users_ref
 class User(UserMixin):
     def __init__(
             self,
-            id: Optional[int],
+            uid: int,
             email: str,
-            first_name: str,
-            last_name:  str,
+            fName: str,
+            lName:  str,
             password: Optional[str] = "",
             country: Optional[str] = "",
             institution: Optional[str] = "",
             aos: Optional[str] = "",
             exp: Optional[str] = ""):
             
-        self.id = id
+        self.uid = uid
         self.email = email
-        self.first_name = first_name
-        self.last_name = last_name
+        self.fName = fName
+        self.lName = lName
         self.password = password
         self.country = country
         self.institution = institution
@@ -39,10 +39,10 @@ class User(UserMixin):
     """
 
     @staticmethod
-    def register(first_name, last_name, email, password, country, ins, aos, exp, gender) -> String :
+    def register(fName, lName, email, password, country, ins, aos, exp, gender) -> String :
         user_id = users_ref.push({
-            "first_name": first_name,
-            "last_name": last_name,
+            "fName": fName,
+            "lName": lName,
             "email": email,
             "password": generate_password_hash(password),
             "country": country,
@@ -50,6 +50,9 @@ class User(UserMixin):
             "aos": aos,
             "exp": exp,
             "gender": gender
+        })
+        users_ref.child(user_id.getKey()).update({
+            "uid": user_id.getKey()
         })
         return True
 
