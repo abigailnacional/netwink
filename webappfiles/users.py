@@ -54,10 +54,10 @@ def register():
     #    return redirect(url_for('index.index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        if User.register(form.email.data,
-                         form.password.data,
-                         form.first_name.data,
-                         form.last_name.data):
+        if User.register(form.first_name.data,
+                         form.last_name.data,
+                         form.email.data,
+                         form.password.data):
             flash('Congratulations, you are now a registered user!')
             return redirect(url_for('index.index')) #change
     return render_template('register.html', title='Register', form=form)

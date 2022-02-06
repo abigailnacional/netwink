@@ -31,11 +31,11 @@ class User(UserMixin):
     is hashed and the hashed version is saved to the database.
     """
     @staticmethod
-    def register(email, first_name, last_name, password):
+    def register(first_name, last_name, email, password):
         new_user = users_ref.push({
-            "email": email,
             "first_name": first_name,
             "last_name": last_name,
+            "email": email,
             "password": generate_password_hash(password)
         })
         return True
