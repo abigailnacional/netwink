@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Netwink</string>
+    <string name="bg_image">Background image</string>
+    <string name="caption">Caption</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or">OR</string>
+    <string name="create_new_account">Create an account</string>
 </resources>
