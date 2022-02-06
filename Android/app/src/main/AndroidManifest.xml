@@ -4,14 +4,28 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Netwink">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".HomePage"
+            android:exported="false"
+            android:theme="@style/Theme.Netwink.NoActionBar"
+            android:label="@string/title_activity_home_page" />
+        <activity
+            android:name=".Welcome"
+            android:theme="@style/Theme.Netwink.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccount"
+            android:exported="false"
+            android:label="@string/create_account" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Netwink.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
