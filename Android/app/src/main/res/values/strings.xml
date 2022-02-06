@@ -4,7 +4,20 @@
     <string name="caption">Caption</string>
     <string name="email_address">Email address</string>
     <string name="password">Password</string>
+    <string name="choose_password">Choose a password</string>
     <string name="sign_in">Sign in</string>
     <string name="or">OR</string>
     <string name="create_new_account">Create an account</string>
+    <string name="create_acc_text">Hello future leader! To start, please tell us about yourself and your professional goals</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="country">Country</string>
+    <string name="recent_institute">Most recent institution</string>
+    <string name="area_of_study">Area of study</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="create_account">Create Account</string>
+    <string name="welcome_msg">Welcome\nto the\nFamily!</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

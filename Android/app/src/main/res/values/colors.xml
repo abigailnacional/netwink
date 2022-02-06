@@ -11,4 +11,6 @@
     <color name="violet_base">#FFEBB1FF</color>
     <color name="violet_variant">#FF8A2D99</color>
     <color name="violet_edittext">#FFCA80D6</color>
+
+    <color name="light_violet">#FFFAEBFF</color>
 </resources>

@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Netwink">
         <activity
+            android:name=".HomePage"
+            android:exported="false"
+            android:label="@string/title_activity_home_page" />
+        <activity
+            android:name=".Welcome"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccount"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Netwink.NoActionBar">

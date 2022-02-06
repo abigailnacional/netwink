@@ -69,6 +69,7 @@
                     android:id="@+id/email_et_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/rounded_m_plus_medium"
                     android:hint="@string/email_address"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -96,6 +97,7 @@
                     android:id="@+id/password_et_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/rounded_m_plus_medium"
                     android:hint="@string/password"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -118,10 +120,11 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rounded_m_plus_bold"
                 android:text="@string/or"
+                android:textColor="#444444"
                 android:textSize="26sp"
                 android:textStyle="bold"
-                android:textColor="#444444"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -131,11 +134,12 @@
                 android:id="@+id/create_acc_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/rounded_m_plus_bold"
                 android:text="@string/create_new_account"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="30dp"
-                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
