@@ -72,6 +72,6 @@ def register():
                          form.aos.data,
                          form.exp.data,
                          form.gender.data):
-            flash('Congratulations, you have successfully registered!')
+            flash('Welcome to the family!')
             return redirect(url_for('index.index'))
     return render_template('register.html', title='Register', form=form)
