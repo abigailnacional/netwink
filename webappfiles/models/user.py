@@ -51,9 +51,7 @@ class User(UserMixin):
             "exp": exp,
             "gender": gender
         })
-        users_ref.child(user_id.getKey()).update({
-            "uid": user_id.getKey()
-        })
+        
         return True
 
     """
