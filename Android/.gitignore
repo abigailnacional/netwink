@@ -14,4 +14,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-configFB.py
+configFB\.py
